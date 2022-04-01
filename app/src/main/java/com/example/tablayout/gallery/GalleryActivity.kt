@@ -1,8 +1,9 @@
-package com.example.tablayout.Gallery
+package com.example.tablayout.gallery
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tablayout.databinding.ActivityGalleryBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class GalleryActivity : AppCompatActivity() {
 
@@ -17,5 +18,19 @@ class GalleryActivity : AppCompatActivity() {
         val adapter  =GalleryAdapter(this)
         galleryViewpager?.adapter = adapter
 
+        TabLayoutMediator(binding!!.tabLayout, galleryViewpager!!){
+            tab, position ->
+            tab.text = getTitle(position)
+
+        }.attach()
+
+    }
+    private fun getTitle(position:Int): String?{
+        return when(position){
+            0 ->"Tee- Shirts"
+            1 -> "Hoodies"
+            2 -> "Sneakers"
+            else -> null
+        }
     }
 }

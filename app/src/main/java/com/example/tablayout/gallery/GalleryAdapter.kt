@@ -1,7 +1,6 @@
-package com.example.tablayout.Gallery
+package com.example.tablayout.gallery
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class GalleryAdapter(activity: AppCompatActivity): FragmentStateAdapter(activity) {
