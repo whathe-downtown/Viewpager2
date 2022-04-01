@@ -16,9 +16,9 @@ class MyPageAdapter(fa: FragmentActivity): FragmentStateAdapter(fa) {
             1 -> {MyFragment.newInstance("Page2","")}
             2 -> {MyFragment.newInstance("Page3","")}
             3 -> {MyFragment.newInstance("Page4","")}
-            5 -> {MyFragment.newInstance("Page5","")}
-            6 -> {MyFragment.newInstance("Page6","")}
-            7-> {MyFragment.newInstance("Page7","")}
+            4-> {MyFragment.newInstance("Page5","")}
+            5 -> {MyFragment.newInstance("Page6","")}
+            6-> {MyFragment.newInstance("Page7","")}
             else -> {MyFragment.newInstance("Page8", "")}
         }
     }
