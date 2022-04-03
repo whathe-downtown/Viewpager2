@@ -1,7 +1,7 @@
 package com.example.tablayout
 
 data class Menu(
-    val category: String,
+    val menuImage: Int,
     val title : String,
     val description : String
 )
