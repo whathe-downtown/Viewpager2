@@ -8,32 +8,45 @@ import android.view.ViewGroup
 import com.example.tablayout.base.BaseFragment
 import com.example.tablayout.databinding.FragmentMyBinding
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class MyFragment : BaseFragment<FragmentMyBinding>(FragmentMyBinding::inflate) {
 
-    private var param1: String? = null
-    private var param2: String? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+        val choice =arguments?.getInt(MENUCATEGORY_ITEM)
+        val viewpager  = binding?.viewPager
+
+        choice?.let {
+            when(choice){
+                0 -> viewpager?.adapter = MenuAdapter(MenuLists.mainFood)
+                1 -> viewpager?.adapter = MenuAdapter(MenuLists.subFood)
+                2 -> viewpager?.adapter = MenuAdapter(MenuLists.mainFood)
+                3 -> viewpager?.adapter = MenuAdapter(MenuLists.subFood)
+                4 -> viewpager?.adapter = MenuAdapter(MenuLists.mainFood)
+                5 -> viewpager?.adapter = MenuAdapter(MenuLists.subFood)
+                6 -> viewpager?.adapter = MenuAdapter(MenuLists.mainFood)
+                7 -> viewpager?.adapter = MenuAdapter(MenuLists.subFood)
+                else -> viewpager?.adapter = MenuAdapter(MenuLists.mainFood)
+
+
+            }
         }
-        binding.textView.text = param1
+
+
+
     }
 
 
     companion object {
+        val MENUCATEGORY_ITEM = "menucateogry_item"
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(position : Int) =
             MyFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putInt(MENUCATEGORY_ITEM, position)
                 }
             }
     }

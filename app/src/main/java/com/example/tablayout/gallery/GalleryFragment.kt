@@ -15,9 +15,9 @@ class GalleryFragment : BaseFragment<FragmentGalleryBinding>(FragmentGalleryBind
 
         pos?.let {
             when(pos){
-                 0-> viewPager?.adapter = IntroAdapter(PageLists.tShirts)
-                1-> viewPager?.adapter = IntroAdapter(PageLists.hoodies)
-                2-> viewPager?.adapter = IntroAdapter(PageLists.sneakers)
+                 0-> viewPager?.adapter = IntroAdapter(PageLists.mainFood)
+                1-> viewPager?.adapter = IntroAdapter(PageLists.subFood)
+                2-> viewPager?.adapter = IntroAdapter(PageLists.chineseFood)
             }
         }
     }
