@@ -8,3 +8,6 @@
   <h2>🍎구조도</h2>
   
 <img width="422" alt="스크린샷 2022-05-27 오후 3 44 11" src="https://user-images.githubusercontent.com/70245821/170645706-f0a2485b-3270-47a3-9127-fa00098aad1b.png">
+
+  
+  <a href = "https://velog.io/@blue-sky/Viewpager2-Fragment-RecyclerView">  <h2>자세한 내용</h2></a>
