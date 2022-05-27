@@ -1,4 +1,7 @@
-package com.example.tablayout
+package com.example.tablayout.repository
+
+import com.example.tablayout.R
+import com.example.tablayout.model.Menu
 
 object MenuLists {
 

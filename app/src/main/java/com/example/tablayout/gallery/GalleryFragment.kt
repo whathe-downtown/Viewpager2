@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.tablayout.base.BaseFragment
 import com.example.tablayout.databinding.FragmentGalleryBinding
+import com.example.tablayout.repository.PageLists
 
 
 class GalleryFragment : BaseFragment<FragmentGalleryBinding>(FragmentGalleryBinding::inflate) {

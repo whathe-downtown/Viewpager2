@@ -1,4 +1,4 @@
-package com.example.tablayout
+package com.example.tablayout.model
 
 data class Menu(
     val menuImage: Int,

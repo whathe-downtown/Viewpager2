@@ -1,12 +1,11 @@
 package com.example.tablayout
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.tablayout.screen.myFragment.MyFragment
 
 
-class MyPageAdapter(fa: FragmentActivity): FragmentStateAdapter(fa) {
+class PagerFragmentStateAdapter(fa: FragmentActivity): FragmentStateAdapter(fa) {
     private val NUM_PAGES = 8
 
     override fun getItemCount(): Int = NUM_PAGES

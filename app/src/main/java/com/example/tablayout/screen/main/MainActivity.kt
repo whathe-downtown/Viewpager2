@@ -1,9 +1,12 @@
-package com.example.tablayout
+package com.example.tablayout.screen.main
 
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
+import com.example.tablayout.PagerFragmentStateAdapter
+import com.example.tablayout.R
+import com.example.tablayout.RecipeCateogry
 import com.example.tablayout.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -23,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.viewpager.apply{
-            adapter = MyPageAdapter(context as FragmentActivity)
+            adapter = PagerFragmentStateAdapter(context as FragmentActivity)
         }
 
         TabLayoutMediator(binding.tabs,binding.viewpager){tab, position ->

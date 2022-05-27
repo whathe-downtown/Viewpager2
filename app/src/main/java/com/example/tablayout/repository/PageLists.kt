@@ -1,6 +1,7 @@
-package com.example.tablayout.gallery
+package com.example.tablayout.repository
 
 import com.example.tablayout.R
+import com.example.tablayout.gallery.Intro
 
 object PageLists {
 
